@@ -14,7 +14,7 @@ jobs:
       run: docker build . --file Dockerfile --tag tscofield/discord-bot-clyde:latest
     
     - name: Login to docker hub
-      run: docker login docker.io
+      run: echo ${{ secrets.DOCKERHUB_PASS }} | docker login --username tscofiel --password-stdin
       
     - name: Push to DockerHUB
       run: docker push tscofield/discord-bot-clyde:latest
