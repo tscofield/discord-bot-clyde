@@ -13,6 +13,7 @@ RUN npm install
 # RUN npm ci --only=production
 
 RUN npm install discord.io
+RUN npm install winston
 
 # Bundle app source
 COPY . .
