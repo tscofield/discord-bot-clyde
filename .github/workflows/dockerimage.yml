@@ -11,7 +11,7 @@ jobs:
        run: node --check index.js
 
   build:
-
+    needs: [check]
     runs-on: ubuntu-latest
 
     steps:
