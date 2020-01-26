@@ -12,12 +12,11 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
-RUN npm install discord.io
-RUN npm install winston
+RUN npm install discord.js
 
 # Bundle app source
 COPY . .
 
-EXPOSE 8080
+#EXPOSE 8080
 
-CMD [ "node", "bot.js" ]
+CMD [ "node", "index.js" ]
