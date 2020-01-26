@@ -7,3 +7,6 @@ To run from the command line
 DISCORD_BOT_TOKEN=..........................
 node index.js
 ```
+
+## Build
+![Docker Image CI](https://github.com/tscofield/discord-bot-clyde/workflows/Docker%20Image%20CI/badge.svg)
