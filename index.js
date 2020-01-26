@@ -11,4 +11,11 @@ client.on('message', msg => {
   } 
 });
 
+// Check that the auth token is defined as an env var
+if(process.env.DISCORD_BOT_TOKEN){
+  console.log('auth token defined, continuing')
+} else {
+  console.log('auth token missing')
+}
+
 client.login(process.env.DISCORD_BOT_TOKEN);
