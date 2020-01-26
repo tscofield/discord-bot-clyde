@@ -10,7 +10,7 @@ client.on('message', msg => {
     msg.reply('Pong!'); 
   } 
   if (msg.content === 'right turn clyde') {
-    msg.reply('POW');
+    msg.react('🤜');
   }
 });
 
