@@ -7,8 +7,11 @@ client.on('ready', () => {
 
 client.on('message', msg => {  
   if (msg.content === 'ping') {     
-    msg.reply('Pong!');   
+    msg.reply('Pong!'); 
   } 
+  if (msg.content === 'right turn clyde') {
+    msg.reply('POW');
+  }
 });
 
 client.login(process.env.DISCORD_BOT_TOKEN);
