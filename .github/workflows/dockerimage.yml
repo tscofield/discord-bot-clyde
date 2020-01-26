@@ -26,15 +26,17 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - name: Build the Docker image
+    - name: Build Latest Docker image
       run: docker build . --file Dockerfile --tag tscofield/discord-bot-clyde:latest
+    - name: Build Versioned Docker image
       run: docker build . --file Dockerfile --tag tscofield/discord-bot-clyde:0.${{ steps.buildnumber.outputs.build_number }}
       
     - name: Login to docker hub
       run: echo ${{ secrets.DOCKERHUB_PASS }} | docker login --username tscofield --password-stdin
       
-    - name: Push to DockerHUB
+    - name: Push Latest to DockerHUB
       run: docker push tscofield/discord-bot-clyde:latest
+    - name: Push Versioned to DockerHUB
       run: docker push tscofield/discord-bot-clyde:0.${{ steps.buildnumber.outputs.build_number }}
 
 
