@@ -39,11 +39,3 @@ jobs:
 
 
 
-
-jobs:
-    
-    # Now you can pass ${{ steps.buildnumber.outputs.build_number }} to the next steps.
-    - name: Another step as an example
-      uses: actions/hello-world-docker-action@v1
-      with:
-        who-to-greet: ${{ steps.buildnumber.outputs.build_number }}
