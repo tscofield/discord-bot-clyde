@@ -6,7 +6,7 @@ jobs:
   check:
    runs-on: ubuntu-latest
    steps:
-     - uses: action/checkout@v1
+     - uses: actions/checkout@v1
      - name: Run Node --check
        run: node --check index.js
 
